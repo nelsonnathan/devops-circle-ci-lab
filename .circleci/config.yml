@@ -1,5 +1,5 @@
 orbs:
-  node: circleci/node@4.2.1
+  node: circleci/node@4.7
 
 version: 2.1
 
@@ -16,6 +16,7 @@ jobs:
         - run: docker volume ls
 
 workflows:
-  app-tests:
+  run-npm-command:
     jobs:
-      - build
+      - node-run:
+          npm-run: test
