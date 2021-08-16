@@ -1,5 +1,4 @@
-const simpleAddition = require('./project');
-const getGreeting = require('./project');
+const { getGreeting, simpleAddition } = require('./project.js');
 
 test('can create a basic greeting', () => {
   expect(getGreeting('Sam')).toBe("Hi Sam");
